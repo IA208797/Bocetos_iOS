@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB06C9372C9DD261006DFA9D /* Cita.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06C9362C9DD261006DFA9D /* Cita.swift */; };
+		FB06C93A2C9DDAB1006DFA9D /* ControladorCita.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06C9392C9DDAB1006DFA9D /* ControladorCita.swift */; };
 		FBA4044C2C9B2B9500492036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4044B2C9B2B9500492036 /* AppDelegate.swift */; };
 		FBA4044E2C9B2B9500492036 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4044D2C9B2B9500492036 /* SceneDelegate.swift */; };
 		FBA404502C9B2B9500492036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4044F2C9B2B9500492036 /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB06C9362C9DD261006DFA9D /* Cita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cita.swift; sourceTree = "<group>"; };
+		FB06C9392C9DDAB1006DFA9D /* ControladorCita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorCita.swift; sourceTree = "<group>"; };
 		FBA404482C9B2B9500492036 /* bocetos_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bocetos_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA4044B2C9B2B9500492036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBA4044D2C9B2B9500492036 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB06C9382C9DD9A6006DFA9D /* controlador_de_vistas */ = {
+			isa = PBXGroup;
+			children = (
+				FB06C9392C9DDAB1006DFA9D /* ControladorCita.swift */,
+			);
+			path = controlador_de_vistas;
+			sourceTree = "<group>";
+		};
 		FBA4043F2C9B2B9400492036 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +115,7 @@
 		FBA4044A2C9B2B9500492036 /* bocetos_1 */ = {
 			isa = PBXGroup;
 			children = (
+				FB06C9382C9DD9A6006DFA9D /* controlador_de_vistas */,
 				FBA4047E2C9B361E00492036 /* controlador */,
 				FBA4047B2C9B355E00492036 /* modelo */,
 				FBA4044B2C9B2B9500492036 /* AppDelegate.swift */,
@@ -137,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA4047C2C9B35A800492036 /* IUBoton.swift */,
+				FB06C9362C9DD261006DFA9D /* Cita.swift */,
 			);
 			path = modelo;
 			sourceTree = "<group>";
@@ -281,7 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA4047D2C9B35A800492036 /* IUBoton.swift in Sources */,
+				FB06C93A2C9DDAB1006DFA9D /* ControladorCita.swift in Sources */,
 				FBA404502C9B2B9500492036 /* ViewController.swift in Sources */,
+				FB06C9372C9DD261006DFA9D /* Cita.swift in Sources */,
 				FBA404802C9B36FF00492036 /* generador_de_citas.swift in Sources */,
 				FBA4044C2C9B2B9500492036 /* AppDelegate.swift in Sources */,
 				FBA4044E2C9B2B9500492036 /* SceneDelegate.swift in Sources */,

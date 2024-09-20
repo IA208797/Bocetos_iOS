@@ -8,7 +8,7 @@
 import Foundation
 
 class GeneradorDeCitas{
-    var citas_creadas: Array<IUBoton>
+    var citas_creadas: Array<Cita>
     
     init(){
         citas_creadas = []
@@ -17,19 +17,19 @@ class GeneradorDeCitas{
     
     func agregar_cita(_ que_dijo: String, quien_lo_dijo: String)
     {
-        var cita_generada = IUBoton(quien_lo_dijo: quien_lo_dijo, que_dijo: que_dijo)
+        var cita_generada = Cita(quien_lo_dijo: quien_lo_dijo, que_dijo: que_dijo)
         
         citas_creadas.append(cita_generada)
     }
     
-    func imprimir_cita() -> IUBoton{
+    func imprimir_cita() -> Cita{
         return citas_creadas[0]
     }
 }
 
-
+/*
 var citas_de_IADA = GeneradorDeCitas()
 
 citas_de_IADA.agregar_cita("Tengo hambre", quien_lo_dijo: "Todos")
-
+*/
 
