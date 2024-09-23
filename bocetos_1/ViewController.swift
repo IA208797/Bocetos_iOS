@@ -15,5 +15,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBSegueAction func al_abrir_pantalla_citas(_ coder: NSCoder) -> ControladorPantallaCitas? {
+        return ControladorPantallaCitas(muro_texto: "Pika pi", de_quien: "Pikachu", coder: coder)
+    }
 }
 
