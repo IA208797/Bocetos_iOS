@@ -9,6 +9,43 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="rgj-Ok-FYp">
+            <objects>
+                <viewController id="knu-lU-gyN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RBQ-en-gFs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dr3-y6-yiz">
+                                <rect key="frame" x="76" y="250" width="240" height="274"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tzw-ns-k5B">
+                                        <rect key="frame" x="72" y="0.0" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhT-Yy-biV">
+                                        <rect key="frame" x="0.0" y="120" width="240" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PuU-We-a3y"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ICZ-W3-wQN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSE-25-Zot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-819.08396946564881" y="733.80281690140851"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="7Ap-XV-QLb">
             <objects>
                 <viewController id="2qE-cE-uN4" sceneMemberID="viewController">
@@ -354,6 +391,15 @@
                                             <segue destination="ZaE-lh-K1A" kind="show" id="rfs-lT-u6r"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OH-hE-lvB">
+                                        <rect key="frame" x="17" y="137" width="85" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Agregar"/>
+                                        <connections>
+                                            <segue destination="knu-lU-gyN" kind="show" id="Ik9-qM-xBV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <constraints>
@@ -619,10 +665,11 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXm-ZY-bGt">
-                                        <rect key="frame" x="252" y="600" width="101" height="56"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cita" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXm-ZY-bGt">
+                                        <rect key="frame" x="252" y="557" width="101" height="148"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="q5O-9h-ccH"/>
+                                            <constraint firstAttribute="height" constant="148" id="5i0-OI-0Tw"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="101" id="nXP-Ql-tnU"/>
                                             <constraint firstAttribute="width" constant="101" id="wgM-Wq-mHD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -633,7 +680,8 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="OXm-ZY-bGt" secondAttribute="trailing" constant="8" id="6ME-VK-NER"/>
-                                    <constraint firstAttribute="bottom" secondItem="OXm-ZY-bGt" secondAttribute="bottom" constant="134" id="Kmu-gg-RbI"/>
+                                    <constraint firstAttribute="trailing" secondItem="OXm-ZY-bGt" secondAttribute="trailing" constant="8" id="ADP-mc-3uP"/>
+                                    <constraint firstAttribute="bottom" secondItem="OXm-ZY-bGt" secondAttribute="bottom" constant="85" id="iL3-KV-o3B"/>
                                     <constraint firstItem="Wr9-wz-1hH" firstAttribute="top" secondItem="jWl-kr-dFW" secondAttribute="top" constant="67" id="jB7-29-D2C"/>
                                     <constraint firstAttribute="trailing" secondItem="Wr9-wz-1hH" secondAttribute="trailing" constant="17" id="m0T-0I-LAd"/>
                                 </constraints>
@@ -667,6 +715,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -678,6 +729,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
