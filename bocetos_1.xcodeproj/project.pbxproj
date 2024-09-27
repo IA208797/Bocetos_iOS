@@ -20,6 +20,7 @@
 		FBA4046F2C9B2B9500492036 /* bocetos_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4046E2C9B2B9500492036 /* bocetos_1UITestsLaunchTests.swift */; };
 		FBA4047D2C9B35A800492036 /* IUBoton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4047C2C9B35A800492036 /* IUBoton.swift */; };
 		FBA404802C9B36FF00492036 /* generador_de_citas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4047F2C9B36FF00492036 /* generador_de_citas.swift */; };
+		FBFAABB42CA70E5500DCBF2C /* ControladorGeneradorCita.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFAABB32CA70E5500DCBF2C /* ControladorGeneradorCita.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		FBA4046E2C9B2B9500492036 /* bocetos_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bocetos_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FBA4047C2C9B35A800492036 /* IUBoton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUBoton.swift; sourceTree = "<group>"; };
 		FBA4047F2C9B36FF00492036 /* generador_de_citas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generador_de_citas.swift; sourceTree = "<group>"; };
+		FBFAABB32CA70E5500DCBF2C /* ControladorGeneradorCita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorGeneradorCita.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				FB667B3F2CA1C27D00131354 /* ControladorPantallaCitas.swift */,
+				FBFAABB32CA70E5500DCBF2C /* ControladorGeneradorCita.swift */,
 			);
 			path = controlador_de_vistas;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBFAABB42CA70E5500DCBF2C /* ControladorGeneradorCita.swift in Sources */,
 				FBA4047D2C9B35A800492036 /* IUBoton.swift in Sources */,
 				FBA404502C9B2B9500492036 /* ViewController.swift in Sources */,
 				FB06C9372C9DD261006DFA9D /* Cita.swift in Sources */,
