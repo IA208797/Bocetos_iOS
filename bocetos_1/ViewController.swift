@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var cita_para_generar: Cita = Cita(quien_lo_dijo: "Creeper", que_dijo: "Tsssssseñor")
+    var cita_para_enviar: Cita = Cita(quien_lo_dijo: "Creeper", que_dijo: "Tsssssseñor")
     var citas_disponibles: GeneradorDeCitas = GeneradorDeCitas()
     var numero_aleatorio: Int = Int.random(in: 0...25)
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         citas_disponibles.generar_citas_falsas()
         super.viewDidLoad()
-        // Do any additional setup after loading the let valor = Int.random(in: 0...100)
+
         actualizar_cantidad()
     }
 
@@ -35,11 +35,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func volver_a_pantalla_inicio(segue: UIStoryboardSegue){
-        let pantalla_citas = segue.source as? ControladorPantallaCitas
-        print(pantalla_citas?.cita_actual.texto)
-        
-        if let pantalla_citas = segue.source as? ControladorPantallaCitas {
-            citas_disponibles.agregar_cita(pantalla_citas.cita_actual.texto, quien_lo_dijo: pantalla_citas.cita_actual.nombre)
+        if let pantalla_agregar_citas = segue.source as? ControladorGeneradorCita{
+            citas_disponibles.agregar_cita(pantalla_agregar_citas.cita_creada!)
         }else
         {
             print("Eso no era un objeto de tipo <ControladorPantallaCitas>")

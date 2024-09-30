@@ -27,13 +27,26 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tzw-ns-k5B">
-                                        <rect key="frame" x="8" y="35" width="224" height="34"/>
+                                        <rect key="frame" x="8" y="35" width="232" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RE-lF-LEp">
+                                        <rect key="frame" x="61" y="196" width="119" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Agregar Cita">
+                                            <color key="baseForegroundColor" red="0.92156863209999995" green="0.74901962280000001" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" systemColor="tertiaryLabelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="agregar_cita_nueva:" destination="knu-lU-gyN" eventType="touchUpInside" id="4jz-se-lQp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mK2-s0-5cH">
                                 <rect key="frame" x="311" y="40" width="36" height="35"/>
@@ -42,15 +55,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="X"/>
                                 <connections>
                                     <segue destination="e9J-ax-P7E" kind="unwind" unwindAction="volver_a_pantalla_inicioWithSegue:" id="nE6-FH-wIj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RE-lF-LEp">
-                                <rect key="frame" x="137" y="565" width="119" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Agregar Cita"/>
-                                <connections>
-                                    <action selector="agregar_cita_nueva:" destination="knu-lU-gyN" eventType="touchUpInside" id="4jz-se-lQp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -380,64 +384,84 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SM-Rp-KN9">
                                 <rect key="frame" x="76" y="59" width="240" height="128"/>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="6SM-Rp-KN9" secondAttribute="height" multiplier="15:8" id="4UT-BL-FsE"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="G85-Br-FJn"/>
-                                    <constraint firstAttribute="height" constant="128" id="YH1-mq-mx2"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="kpF-8I-jb7"/>
-                                    <constraint firstAttribute="width" constant="240" id="sp6-G2-2Zz"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8y3-kX-FyR">
                                 <rect key="frame" x="136.66666666666666" y="229.66666666666663" width="119.99999999999997" height="418"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u02-CI-GJi">
-                                        <rect key="frame" x="18" y="8" width="84" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u02-CI-GJi">
+                                        <rect key="frame" x="18" y="36.000000000000028" width="84" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="g2f-8T-5GN"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="j3J-vb-tQM"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Pikachu"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Pikachu">
+                                            <color key="baseBackgroundColor" systemColor="systemFillColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="HO6-1y-fdF" kind="presentation" destinationCreationSelector="al_abrir_pantalla_citas:" modalPresentationStyle="fullScreen" id="UWs-c1-bKD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stz-aD-eyX">
-                                        <rect key="frame" x="26" y="51" width="67" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stz-aD-eyX">
+                                        <rect key="frame" x="26.333333333333343" y="94.000000000000028" width="67" height="35"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Zelda"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Zelda">
+                                            <color key="baseBackgroundColor" systemColor="systemFillColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="2qE-cE-uN4" kind="showDetail" id="YFC-sI-1py"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXi-pr-qJk">
-                                        <rect key="frame" x="28" y="94" width="64" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OH-hE-lvB">
+                                        <rect key="frame" x="17.666666666666686" y="210.00000000000003" width="84.666666666666671" height="35"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Kirby"/>
-                                        <connections>
-                                            <segue destination="ZaE-lh-K1A" kind="show" id="rfs-lT-u6r"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OH-hE-lvB">
-                                        <rect key="frame" x="17" y="137" width="85" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Agregar"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Agregar">
+                                            <color key="baseBackgroundColor" systemColor="systemFillColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="knu-lU-gyN" kind="presentation" modalPresentationStyle="fullScreen" id="Ik9-qM-xBV"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maa-qm-KTx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maa-qm-KTx">
                                         <rect key="frame" x="39" y="389" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXi-pr-qJk">
+                                        <rect key="frame" x="28" y="153" width="64" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="A2X-DN-2WK"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="WZb-hb-pKC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Kirby">
+                                            <color key="baseBackgroundColor" systemColor="systemFillColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="ZaE-lh-K1A" kind="show" id="rfs-lT-u6r"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u02-CI-GJi" secondAttribute="trailing" id="16w-KF-RgJ"/>
+                                    <constraint firstItem="DXi-pr-qJk" firstAttribute="centerX" secondItem="3OH-hE-lvB" secondAttribute="centerX" id="2mT-Mz-hgd"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DXi-pr-qJk" secondAttribute="trailing" id="34B-2l-t7M"/>
+                                    <constraint firstItem="DXi-pr-qJk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8y3-kX-FyR" secondAttribute="leading" id="4U3-kM-LYb"/>
+                                    <constraint firstItem="u02-CI-GJi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8y3-kX-FyR" secondAttribute="leading" id="7BN-8p-re7"/>
+                                    <constraint firstItem="u02-CI-GJi" firstAttribute="top" secondItem="8y3-kX-FyR" secondAttribute="top" constant="36" id="Hoj-QG-SFY"/>
+                                    <constraint firstItem="3OH-hE-lvB" firstAttribute="top" secondItem="DXi-pr-qJk" secondAttribute="bottom" constant="22.000000000000028" id="KfK-BQ-1Lc"/>
                                     <constraint firstAttribute="width" constant="120" id="N7b-v8-gOz"/>
+                                    <constraint firstItem="DXi-pr-qJk" firstAttribute="top" secondItem="stz-aD-eyX" secondAttribute="bottom" constant="23.999999999999972" id="Xhd-3k-78P"/>
+                                    <constraint firstItem="stz-aD-eyX" firstAttribute="top" secondItem="u02-CI-GJi" secondAttribute="bottom" constant="23" id="eO6-Oa-iMV"/>
+                                    <constraint firstItem="DXi-pr-qJk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8y3-kX-FyR" secondAttribute="leading" id="hga-Pb-K0a"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DXi-pr-qJk" secondAttribute="trailing" id="nOJ-C1-IrA"/>
+                                    <constraint firstItem="DXi-pr-qJk" firstAttribute="centerX" secondItem="8y3-kX-FyR" secondAttribute="centerX" id="ptD-jU-nG5"/>
+                                    <constraint firstItem="u02-CI-GJi" firstAttribute="centerX" secondItem="8y3-kX-FyR" secondAttribute="centerX" id="uAB-uJ-eo9"/>
+                                    <constraint firstItem="stz-aD-eyX" firstAttribute="centerX" secondItem="8y3-kX-FyR" secondAttribute="centerX" id="vtC-BW-Lke"/>
+                                    <constraint firstItem="DXi-pr-qJk" firstAttribute="centerX" secondItem="maa-qm-KTx" secondAttribute="centerX" id="xw1-vX-P4d"/>
+                                    <constraint firstAttribute="bottom" secondItem="maa-qm-KTx" secondAttribute="bottom" constant="8" id="y3v-ac-OlP"/>
                                     <constraint firstAttribute="height" constant="418" id="z6q-fP-Fl5"/>
                                 </constraints>
                             </view>
@@ -478,21 +502,23 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
+                            <constraint firstItem="6SM-Rp-KN9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1l5-kF-e5Q"/>
+                            <constraint firstItem="6SM-Rp-KN9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="6Eb-fX-WPK"/>
                             <constraint firstItem="8y3-kX-FyR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="6gy-yd-cqx"/>
-                            <constraint firstItem="6SM-Rp-KN9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="CCC-TV-IkI"/>
                             <constraint firstItem="bSe-cC-H3w" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Cxj-8R-p1D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bSe-cC-H3w" secondAttribute="trailing" constant="16" id="D79-Rj-eQG"/>
                             <constraint firstItem="jtU-Kd-p6H" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="EbS-1F-pvp"/>
                             <constraint firstItem="KYT-sS-Hio" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="F9b-Pv-DQy"/>
+                            <constraint firstItem="8y3-kX-FyR" firstAttribute="top" secondItem="6SM-Rp-KN9" secondAttribute="bottom" constant="42.666666666666629" id="FEj-sE-ZqR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jtU-Kd-p6H" secondAttribute="trailing" constant="16" id="G1d-EX-q3d"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6SM-Rp-KN9" secondAttribute="trailing" constant="77" id="HQE-Lv-0GH"/>
+                            <constraint firstItem="bSe-cC-H3w" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="IYO-fA-4pD"/>
                             <constraint firstItem="Phk-ei-BuO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ORY-Fa-W7N"/>
-                            <constraint firstItem="6SM-Rp-KN9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="ZVc-S5-3VK"/>
-                            <constraint firstItem="6SM-Rp-KN9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eRS-0O-1S0"/>
                             <constraint firstItem="8y3-kX-FyR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="h00-WM-Wkw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6SM-Rp-KN9" secondAttribute="trailing" constant="77" id="jmG-pz-HCj"/>
                             <constraint firstItem="Phk-ei-BuO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="pZj-bj-cmR"/>
+                            <constraint firstItem="KYT-sS-Hio" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pjL-yo-ag7"/>
                             <constraint firstItem="KYT-sS-Hio" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vKK-Fg-BKI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bSe-cC-H3w" secondAttribute="trailing" constant="16" id="wI7-uK-Yvg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jtU-Kd-p6H" secondAttribute="trailing" constant="16" id="wlj-D5-4Be"/>
@@ -763,14 +789,17 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -786,6 +815,9 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
