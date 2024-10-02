@@ -11,6 +11,8 @@ class ControladorPantallaCitas: UIViewController{
     @IBOutlet weak var nombre_de_quien_lo_dijo: UILabel!
     @IBOutlet weak var que_dijo_muro_text: UILabel!
     
+    
+    
     var cita_actual: Cita
     
     required init?(coder: NSCoder) {

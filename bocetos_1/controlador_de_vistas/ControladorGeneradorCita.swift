@@ -21,6 +21,8 @@ class ControladorGeneradorCita: UIViewController{
     
     @IBAction func agregar_cita_nueva(_ sender: UIButton) {
         cita_creada = Cita(quien_lo_dijo: quien_lo_dijo_view.text!, que_dijo: que_es_lo_que_dijo.text!)
+        quien_lo_dijo_view.text = "¡Listo! Tú cita se agregó"
+        que_es_lo_que_dijo.text = "¿Qué haces aquí aún?"
     }
     
     

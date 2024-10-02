@@ -41,6 +41,45 @@ class GeneradorDeCitas{
         self.agregar_cita_manual("Solia ser un explorador como tu... Pero me dieron con una flecha en la rodilla",
                           quien_lo_dijo: "Guardia"
         )
+        self.agregar_cita_manual("Es peligroso ir solo. Tóma esto.",
+                          quien_lo_dijo: "Sabio"
+        )
+        
+        self.agregar_cita_manual("¿Qué es un hombre? Una pequeña y miserable pila de secretos.",
+                          quien_lo_dijo: "Drácula"
+        )
+        
+        self.agregar_cita_manual("Lo siento, Mario, pero la princesa está en otro castillo.",
+                          quien_lo_dijo: "Toad"
+        )
+        
+        self.agregar_cita_manual("Mira detrás de ti, ¡Un mono de tres cabezas!",
+                          quien_lo_dijo: "Monkey Island"
+        )
+        
+        self.agregar_cita_manual("El hombre sabio no teme preguntar, pero el hombre sabio siempre cuestiona las respuestas que recibe.",
+                          quien_lo_dijo: "Kvothe"
+        )
+        
+        self.agregar_cita_manual("El tiempo cura todas las heridas, pero sólo si estás dispuesto a dejarlo hacerlo",
+                          quien_lo_dijo: "El nombre del viento"
+        )
+        
+        self.agregar_cita_manual("Aunque soy Hylia renacida, sigo siendo la hija de mi padre y tu amiga. Sigo siendo tu Zelda… Así que te voy a pedir un favor, dormilón. Desde que éramos niños, siempre era yo la que te despertaba cuando te dormías. Pero esta vez, cuando todo esto termine, ¿vendrás a despertarme?", 
+                                 quien_lo_dijo: "Zelda - Skyward Sword"
+        )
+        
+        self.agregar_cita_manual("Umm... ¿Puedo hacer... una pregunta? Lo correcto... ¿qué es? Me pregunto... si haces lo correcto... ¿realmente hace... a todos... felices?", 
+                                 quien_lo_dijo: "Niño con mascara de Gyorg"
+        )
+        
+        self.agregar_cita_manual("Ahora veo que las circunstancias de nacimiento de uno son irrelevantes; es lo que haces con el regalo de la vida lo que determina quién eres", 
+                                 quien_lo_dijo: "MewTwo"
+        )
+        
+        self.agregar_cita_manual("Aquel viento lo codicié, supongo...", 
+                                 quien_lo_dijo: "Ganondorf - Wind Waker"
+        )
     }
     
     func obtener_cita_aleatoria() -> Cita{

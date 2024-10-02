@@ -30,13 +30,24 @@ class ViewController: UIViewController {
         return ControladorPantallaCitas(cita_para_citar: citas_disponibles.obtener_cita_aleatoria(), coder: coder)
     }
     
+    @IBSegueAction func ir_a_la_pantalla_citas_zelda(_ coder: NSCoder) -> ControladorPantallaCitas? {
+        return ControladorPantallaCitas(cita_para_citar: citas_disponibles.obtener_cita_aleatoria(), coder: coder)
+    }
+    
+    @IBSegueAction func ir_a_pantalla_citas_kirby(_ coder: NSCoder) -> ControladorPantallaCitas? {
+        return ControladorPantallaCitas(cita_para_citar: citas_disponibles.obtener_cita_aleatoria(), coder: coder)
+    }
+    
+    
     @IBAction func al_pulsar_boton(_ sender: UIButton){
         
     }
     
     @IBAction func volver_a_pantalla_inicio(segue: UIStoryboardSegue){
         if let pantalla_agregar_citas = segue.source as? ControladorGeneradorCita{
-            citas_disponibles.agregar_cita(pantalla_agregar_citas.cita_creada!)
+            if pantalla_agregar_citas.cita_creada != nil{
+                citas_disponibles.agregar_cita(pantalla_agregar_citas.cita_creada!)
+            }
         }else
         {
             print("Eso no era un objeto de tipo <ControladorPantallaCitas>")
