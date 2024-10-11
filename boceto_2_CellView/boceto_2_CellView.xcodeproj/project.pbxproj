@@ -15,7 +15,13 @@
 		FB09A8D82CB43C1100BADC4C /* boceto_2_CellViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB09A8D72CB43C1100BADC4C /* boceto_2_CellViewTests.swift */; };
 		FB09A8E22CB43C1100BADC4C /* boceto_2_CellViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB09A8E12CB43C1100BADC4C /* boceto_2_CellViewUITests.swift */; };
 		FB09A8E42CB43C1100BADC4C /* boceto_2_CellViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB09A8E32CB43C1100BADC4C /* boceto_2_CellViewUITestsLaunchTests.swift */; };
-		FB09A8F32CB4416500BADC4C /* ControladorPantallaDeColeccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB09A8F22CB4416500BADC4C /* ControladorPantallaDeColeccion.swift */; };
+		FB09A8F32CB4416500BADC4C /* ControladorPantallaPrincipalDeColeccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB09A8F22CB4416500BADC4C /* ControladorPantallaPrincipalDeColeccion.swift */; };
+		FB1522482CB988BF00DC0265 /* EstiloCellViewControllerCelular.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1522472CB988BF00DC0265 /* EstiloCellViewControllerCelular.swift */; };
+		FB6CD1072CB983C6001FA911 /* VistaDeZelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6CD1062CB983C6001FA911 /* VistaDeZelda.swift */; };
+		FB6CD1092CB98430001FA911 /* ControladorPantallaDelPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6CD1082CB98430001FA911 /* ControladorPantallaDelPost.swift */; };
+		FB6CD10C2CB984F9001FA911 /* mod_navegador_principal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6CD10B2CB984F9001FA911 /* mod_navegador_principal.swift */; };
+		FB6CD1102CB985C9001FA911 /* posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6CD10F2CB985C9001FA911 /* posts.swift */; };
+		FB6CD1122CB98610001FA911 /* proveedor_publicaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6CD1112CB98610001FA911 /* proveedor_publicaciones.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +54,13 @@
 		FB09A8DD2CB43C1100BADC4C /* boceto_2_CellViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = boceto_2_CellViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB09A8E12CB43C1100BADC4C /* boceto_2_CellViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boceto_2_CellViewUITests.swift; sourceTree = "<group>"; };
 		FB09A8E32CB43C1100BADC4C /* boceto_2_CellViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boceto_2_CellViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FB09A8F22CB4416500BADC4C /* ControladorPantallaDeColeccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorPantallaDeColeccion.swift; sourceTree = "<group>"; };
+		FB09A8F22CB4416500BADC4C /* ControladorPantallaPrincipalDeColeccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorPantallaPrincipalDeColeccion.swift; sourceTree = "<group>"; };
+		FB1522472CB988BF00DC0265 /* EstiloCellViewControllerCelular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstiloCellViewControllerCelular.swift; sourceTree = "<group>"; };
+		FB6CD1062CB983C6001FA911 /* VistaDeZelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaDeZelda.swift; sourceTree = "<group>"; };
+		FB6CD1082CB98430001FA911 /* ControladorPantallaDelPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladorPantallaDelPost.swift; sourceTree = "<group>"; };
+		FB6CD10B2CB984F9001FA911 /* mod_navegador_principal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mod_navegador_principal.swift; sourceTree = "<group>"; };
+		FB6CD10F2CB985C9001FA911 /* posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = posts.swift; sourceTree = "<group>"; };
+		FB6CD1112CB98610001FA911 /* proveedor_publicaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = proveedor_publicaciones.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,8 @@
 		FB09A8BF2CB43C1000BADC4C /* boceto_2_CellView */ = {
 			isa = PBXGroup;
 			children = (
+				FB6CD10E2CB985A7001FA911 /* proveedor */,
+				FB6CD10D2CB9859F001FA911 /* modelos */,
 				FB09A8F02CB43FDF00BADC4C /* controladores_de_pantallas */,
 				FB09A8C02CB43C1000BADC4C /* AppDelegate.swift */,
 				FB09A8C22CB43C1000BADC4C /* SceneDelegate.swift */,
@@ -130,7 +144,9 @@
 		FB09A8F02CB43FDF00BADC4C /* controladores_de_pantallas */ = {
 			isa = PBXGroup;
 			children = (
+				FB6CD10A2CB984C6001FA911 /* estilos */,
 				FB09A8F12CB43FFE00BADC4C /* vista_de_celdas */,
+				FB6CD1082CB98430001FA911 /* ControladorPantallaDelPost.swift */,
 			);
 			path = controladores_de_pantallas;
 			sourceTree = "<group>";
@@ -138,9 +154,35 @@
 		FB09A8F12CB43FFE00BADC4C /* vista_de_celdas */ = {
 			isa = PBXGroup;
 			children = (
-				FB09A8F22CB4416500BADC4C /* ControladorPantallaDeColeccion.swift */,
+				FB6CD1062CB983C6001FA911 /* VistaDeZelda.swift */,
+				FB09A8F22CB4416500BADC4C /* ControladorPantallaPrincipalDeColeccion.swift */,
 			);
 			path = vista_de_celdas;
+			sourceTree = "<group>";
+		};
+		FB6CD10A2CB984C6001FA911 /* estilos */ = {
+			isa = PBXGroup;
+			children = (
+				FB6CD10B2CB984F9001FA911 /* mod_navegador_principal.swift */,
+				FB1522472CB988BF00DC0265 /* EstiloCellViewControllerCelular.swift */,
+			);
+			path = estilos;
+			sourceTree = "<group>";
+		};
+		FB6CD10D2CB9859F001FA911 /* modelos */ = {
+			isa = PBXGroup;
+			children = (
+				FB6CD10F2CB985C9001FA911 /* posts.swift */,
+			);
+			path = modelos;
+			sourceTree = "<group>";
+		};
+		FB6CD10E2CB985A7001FA911 /* proveedor */ = {
+			isa = PBXGroup;
+			children = (
+				FB6CD1112CB98610001FA911 /* proveedor_publicaciones.swift */,
+			);
+			path = proveedor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +316,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB09A8F32CB4416500BADC4C /* ControladorPantallaDeColeccion.swift in Sources */,
+				FB6CD10C2CB984F9001FA911 /* mod_navegador_principal.swift in Sources */,
+				FB09A8F32CB4416500BADC4C /* ControladorPantallaPrincipalDeColeccion.swift in Sources */,
+				FB6CD1072CB983C6001FA911 /* VistaDeZelda.swift in Sources */,
+				FB6CD1092CB98430001FA911 /* ControladorPantallaDelPost.swift in Sources */,
 				FB09A8C12CB43C1000BADC4C /* AppDelegate.swift in Sources */,
+				FB1522482CB988BF00DC0265 /* EstiloCellViewControllerCelular.swift in Sources */,
 				FB09A8C32CB43C1000BADC4C /* SceneDelegate.swift in Sources */,
+				FB6CD1122CB98610001FA911 /* proveedor_publicaciones.swift in Sources */,
+				FB6CD1102CB985C9001FA911 /* posts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
