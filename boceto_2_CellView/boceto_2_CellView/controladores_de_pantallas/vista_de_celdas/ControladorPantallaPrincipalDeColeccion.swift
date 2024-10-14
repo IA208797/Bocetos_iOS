@@ -20,30 +20,32 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
     
     @IBOutlet weak var outlet_de_la_vista: UICollectionView!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("Estamos cargando la aplciacon")
+        
         let ubicacion = URL(string: url_de_publicaciones)!
-                URLSession.shared.dataTask(with: ubicacion) {
-                        (datos, respuesta, error) in do {
-                            if let publicaciones_recibidas = datos{
-                                let prueba_de_interpretacion_de_datos = try JSONDecoder().decode([Publicacion].self, from: publicaciones_recibidas)
-                                
-                                self.lista_de_publicaciones = prueba_de_interpretacion_de_datos
-                                
-                                DispatchQueue.main.async {                        self.collectionView.reloadData()
-                                }
-                            }
-                            else {
-                                print(respuesta)
-                            }
-                        } catch {
-                            print("Error")
+        URLSession.shared.dataTask(with: ubicacion) {
+                (datos, respuesta, error) in do {
+                    print("Estamos itnentado descargar lainformacion")
+                    if let publicaciones_recibidas = datos{
+                        let prueba_de_interpretacion_de_datos = try JSONDecoder().decode([Publicacion].self, from: publicaciones_recibidas)
+                        
+                        self.lista_de_publicaciones = prueba_de_interpretacion_de_datos
+                        
+                        DispatchQueue.main.async {
+                            self.collectionView.reloadData()
+                            print("Esrtamos actualizando o refrescando la infomraicon ya descargada")
                         }
-                }.resume()
+                    }
+                    else {
+                        print(respuesta)
+                    }
+                } catch {
+                    print("Error")
+                }
+        }.resume()
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -86,7 +88,7 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
             // Configure the cell
             //celda.tintColor = UIColor.green
             
-            celda.etiqueta.text = self.lista_de_publicaciones[indexPath.item].title
+            celda.titulo.text = self.lista_de_publicaciones[indexPath.item].title
             celda.cuerpo.text = self.lista_de_publicaciones[indexPath.item].body
 
             // print(self.lista_de_publicaciones)
@@ -96,12 +98,12 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
            print("Se selecciono la celda\(indexPath)")
-           
+           /**/
            let pantalla_de_publicacion = storyboard?.instantiateViewController(withIdentifier: "PantallaPublicacion") as! ControladorPantallaDelPost
            
            self.navigationController?.pushViewController(pantalla_de_publicacion, animated: true)
            
-           print(self.navigationController)
+           print(self.navigationController)/**/
 
        }
     

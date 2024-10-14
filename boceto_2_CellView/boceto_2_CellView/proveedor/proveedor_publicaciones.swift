@@ -32,10 +32,10 @@ class ProveedorDePublicaciones{
                             let prueba_de_interpretacion_de_datos = try JSONDecoder().decode([Publicacion].self, from: publicaciones_recibidas)
                             
                             self.lista_de_publicaciones = prueba_de_interpretacion_de_datos
-                            que_hacer_al_recibir(prueba_de_interpretacion_de_datos ?? [])
+                            que_hacer_al_recibir(prueba_de_interpretacion_de_datos)
                         }
                         else {
-                            print(respuesta)
+                            print(respuesta!)
                         }
                     } catch {
                         print("Error")
