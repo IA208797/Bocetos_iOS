@@ -23,8 +23,8 @@ class ProveedorDePublicaciones{
         
         private init() {}
         
-        func obtener_publicaicones(que_hacer_al_recibir: @escaping ([Publicacion]) -> Void) {
-        // func obtener_publicaicones() async throws -> [Publicacion] {
+        func obtener_publicaciones(que_hacer_al_recibir: @escaping ([Publicacion]) -> Void) {
+        // func obtener_publicaciones() async throws -> [Publicacion] {
             let ubicacion = URL(string: url_de_publicaciones)!
             URLSession.shared.dataTask(with: ubicacion) {
                     (datos, respuesta, error) in do {
@@ -43,8 +43,8 @@ class ProveedorDePublicaciones{
             }.resume()
         }
         
-        func realizar_subida_de_publicacion(publicaicon_nueva: Publicacion) {
-            // func obtener_publicaicones() async throws -> [Publicacion] {
+        func realizar_subida_de_publicacion(publicacion_nueva: Publicacion) {
+            // func obtener_publicaciones() async throws -> [Publicacion] {
                 let ubicacion = URL(string: url_de_publicaciones)!
                 URLSession.shared.dataTask(with: ubicacion) {
                     (datos, respuesta, error) in do {}

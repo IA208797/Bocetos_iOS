@@ -12,8 +12,8 @@ extension ControladorPantallaPrincipalDeColeccion: UICollectionViewDelegateFlowL
         var ancho = self.collectionView.frame.width
         var largo = self.collectionView.frame.height
         
-        ancho = ancho / 3.5
-        largo = ancho * 0.5
+        ancho = ancho / 1.5
+        largo = ancho * 0.8
         
         return CGSize(width: ancho, height: largo)
     }
@@ -21,7 +21,7 @@ extension ControladorPantallaPrincipalDeColeccion: UICollectionViewDelegateFlowL
     // Modifica el inset de las vistas
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        var margin = CGFloat(25)
+        let margin = CGFloat(25)
     
         return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
     }

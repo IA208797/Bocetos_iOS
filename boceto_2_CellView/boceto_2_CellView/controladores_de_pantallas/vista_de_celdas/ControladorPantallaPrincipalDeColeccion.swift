@@ -18,17 +18,17 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
     
     let proveedor_publicaciones = ProveedorDePublicaciones.autoreferencia
     
-    @IBOutlet weak var outlet_de_la_vista: UICollectionView!
+   // @IBOutlet weak var outlet_de_la_vista: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("Estamos cargando la aplciacon")
+        print("Estamos cargando la aplicacion")
         
         let ubicacion = URL(string: url_de_publicaciones)!
         URLSession.shared.dataTask(with: ubicacion) {
                 (datos, respuesta, error) in do {
-                    print("Estamos itnentado descargar lainformacion")
+                    print("Estamos itnentado descargar la informacion")
                     if let publicaciones_recibidas = datos{
                         let prueba_de_interpretacion_de_datos = try JSONDecoder().decode([Publicacion].self, from: publicaciones_recibidas)
                         
@@ -36,11 +36,11 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
                         
                         DispatchQueue.main.async {
                             self.collectionView.reloadData()
-                            print("Esrtamos actualizando o refrescando la infomraicon ya descargada")
+                            print("Estamos actualizando o refrescando la informacion ya descargada")
                         }
                     }
                     else {
-                        print(respuesta)
+                        print(respuesta as Any)
                     }
                 } catch {
                     print("Error")
@@ -78,15 +78,18 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
+        print(self.lista_de_publicaciones.count)
+        
         return self.lista_de_publicaciones.count
     }
 
     // Funcion para identificar y crear cada una de las celdas creadas en el Controller
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
             let celda: VistaDeZelda = collectionView.dequeueReusableCell(withReuseIdentifier: identificador_de_celda, for: indexPath) as! VistaDeZelda
         
             // Configure the cell
-            //celda.tintColor = UIColor.green
+            //celda.backgroundColor = UIColor.green
             
             celda.titulo.text = self.lista_de_publicaciones[indexPath.item].title
             celda.cuerpo.text = self.lista_de_publicaciones[indexPath.item].body
@@ -103,7 +106,7 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController {
            
            self.navigationController?.pushViewController(pantalla_de_publicacion, animated: true)
            
-           print(self.navigationController)/**/
+        print(self.navigationController as Any)/**/
 
        }
     
