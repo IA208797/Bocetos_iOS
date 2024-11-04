@@ -74,36 +74,30 @@
                                     <rect key="frame" x="0.0" y="0.0" width="277" height="187"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eR-aO-jYI">
-                                            <rect key="frame" x="27" y="8" width="223" height="52"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuerpo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yBq-Zs-gg3">
+                                            <rect key="frame" x="104" y="124" width="69" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                            <color key="highlightedColor" systemColor="labelColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7eR-aO-jYI">
+                                            <rect key="frame" x="106.66666666666669" y="25" width="64" height="29"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="52" id="Hrq-HN-rA4"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="NMH-HK-hFe"/>
-                                                <constraint firstAttribute="width" constant="222" id="bby-7E-5W8"/>
+                                                <constraint firstAttribute="height" constant="29" id="MZy-aM-YG8"/>
+                                                <constraint firstAttribute="width" constant="64" id="pMS-GL-bMR"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuerpo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yBq-Zs-gg3">
-                                            <rect key="frame" x="27" y="68" width="223" height="100"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="uiY-zP-xf7"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
-                                            <color key="highlightedColor" systemColor="labelColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
                                     <constraints>
-                                        <constraint firstItem="7eR-aO-jYI" firstAttribute="centerX" secondItem="zbD-0S-FYM" secondAttribute="centerX" id="3wy-0S-TBz"/>
-                                        <constraint firstItem="7eR-aO-jYI" firstAttribute="top" secondItem="zbD-0S-FYM" secondAttribute="topMargin" id="7If-vW-4wY"/>
-                                        <constraint firstItem="yBq-Zs-gg3" firstAttribute="leading" secondItem="zbD-0S-FYM" secondAttribute="leading" constant="27" id="98c-eX-Kjk"/>
-                                        <constraint firstItem="yBq-Zs-gg3" firstAttribute="leading" secondItem="7eR-aO-jYI" secondAttribute="leading" id="BUT-qy-nT2"/>
-                                        <constraint firstItem="yBq-Zs-gg3" firstAttribute="top" secondItem="7eR-aO-jYI" secondAttribute="bottom" constant="8" symbolic="YES" id="Y18-rr-jft"/>
-                                        <constraint firstItem="yBq-Zs-gg3" firstAttribute="trailing" secondItem="7eR-aO-jYI" secondAttribute="trailing" id="eP5-py-mYw"/>
-                                        <constraint firstItem="yBq-Zs-gg3" firstAttribute="bottom" secondItem="zbD-0S-FYM" secondAttribute="bottomMargin" constant="-11" id="joL-nd-Xf1"/>
+                                        <constraint firstItem="yBq-Zs-gg3" firstAttribute="top" secondItem="7eR-aO-jYI" secondAttribute="bottom" constant="70" id="Uhc-xs-TTQ"/>
+                                        <constraint firstItem="7eR-aO-jYI" firstAttribute="centerX" secondItem="yBq-Zs-gg3" secondAttribute="centerX" id="Z2d-yf-krb"/>
+                                        <constraint firstItem="7eR-aO-jYI" firstAttribute="top" secondItem="zbD-0S-FYM" secondAttribute="top" constant="25" id="meR-kX-7Xw"/>
+                                        <constraint firstItem="7eR-aO-jYI" firstAttribute="centerX" secondItem="zbD-0S-FYM" secondAttribute="centerX" id="oxL-JD-Oyd"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -123,7 +117,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4f-cn-8K2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390" y="82"/>
+            <point key="canvasLocation" x="387.02290076335879" y="81.690140845070431"/>
         </scene>
         <!--Controlador Pantalla Del Post-->
         <scene sceneID="ncM-Xh-ceH">
@@ -147,7 +141,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oqz-w7-0Gy">
                                 <rect key="frame" x="16" y="248" width="361" height="570"/>
-                                <color key="backgroundColor" red="0.79362245840000001" green="0.7035968803" blue="0.91976243260000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4J7-eT-F7p">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -212,25 +206,28 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
-            <color red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

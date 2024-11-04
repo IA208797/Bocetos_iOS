@@ -16,6 +16,7 @@ class ControladorPantallaDelPost: UIViewController, UICollectionViewDataSource{
     @IBOutlet weak var nombre_de_usuario: UILabel!
     @IBOutlet weak var cuerpo_de_publicacion: UILabel!
     @IBOutlet weak var seccion_comentarios: UICollectionView!
+    
     public var id_publicacion: Int?
     
     private var publicacion: Publicacion?
@@ -24,10 +25,8 @@ class ControladorPantallaDelPost: UIViewController, UICollectionViewDataSource{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+    
         // Do any additional setup after loading the view.
-        
         
         let controlador_de_navegacion = self.navigationController as? mod_navegador_principal
         controlador_de_navegacion?.activar_navigation_bar(activar: true)
@@ -36,7 +35,6 @@ class ControladorPantallaDelPost: UIViewController, UICollectionViewDataSource{
         
         realizar_descarga_de_informacion()
     }
-    
     func realizar_descarga_de_informacion(){
         if self.publicacion == nil {
             proveedor_publicaciones.obtener_publicacion(id: self.id_publicacion ?? -1, que_hacer_al_recibir: {
@@ -47,7 +45,6 @@ class ControladorPantallaDelPost: UIViewController, UICollectionViewDataSource{
                 }
             })
         }
-        
         else if self.publicacion != nil {
             proveedor_publicaciones.obtener_usuario(id: publicacion!.userId, que_hacer_al_recibir: {
                 [weak self] (usuario) in self?.usuario = usuario
@@ -55,7 +52,6 @@ class ControladorPantallaDelPost: UIViewController, UICollectionViewDataSource{
                     self?.dibujar_usuario()
                 }
             })
-            
             proveedor_publicaciones.obtener_comentarios_en_publicacion(id: publicacion!.id, que_hacer_al_recibir: {
                 [weak self] (comentarios_descargados) in self?.lista_comentarios = comentarios_descargados
                 DispatchQueue.main.async {
@@ -63,28 +59,22 @@ class ControladorPantallaDelPost: UIViewController, UICollectionViewDataSource{
                 }
             })
         }
-        
-        
-        
     }
     
     func dibujar_publicacion(){
         guard let publicacion_actual = self.publicacion else {
             return
         }
-        
         titulo_de_publicacion.text = publicacion_actual.title
         cuerpo_de_publicacion.text = publicacion_actual.body
-        
     }
-    
     func dibujar_usuario(){
         guard let usuario_actual = self.usuario else {
             return
         }
-        
         nombre_de_usuario.text = usuario_actual.username
-        
+    }
+    func dibujar_comentario(){
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
