@@ -18,6 +18,7 @@ class ControladorPantallaDelPost: UIViewController, UICollectionViewDataSource{
     @IBOutlet weak var seccion_comentarios: UICollectionView!
     
     public var id_publicacion: Int?
+    public var id_comentario: Int?
     
     private var publicacion: Publicacion?
     private var usuario: Usuario?
@@ -74,8 +75,6 @@ class ControladorPantallaDelPost: UIViewController, UICollectionViewDataSource{
         }
         nombre_de_usuario.text = usuario_actual.username
     }
-    func dibujar_comentario(){
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return lista_comentarios.count
@@ -83,16 +82,28 @@ class ControladorPantallaDelPost: UIViewController, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print("Aquí debería hacer algo")
-        let celda = collectionView.dequeueReusableCell(withReuseIdentifier: identificador_de_celda, for: indexPath)
-    
+        //let celda = collectionView.dequeueReusableCell(withReuseIdentifier: identificador_de_celda, for: indexPath)
+        
+        let celda_comentario: VistaZeldaComentario = collectionView.dequeueReusableCell(withReuseIdentifier: identificador_de_celda, for: indexPath) as! VistaZeldaComentario
+        
+        celda_comentario.cuerpo.text = self.lista_comentarios[indexPath.item].body
+        
+        
         // Configure the cell
-        celda.tintColor = UIColor.green
+        //celda_comentario.tintColor = UIColor.green
   
         // print(self.lista_de_publicaciones)
         
-        return celda
+        return celda_comentario
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let celda_comentario = storyboard?.instantiateViewController(withIdentifier: "ZeldaComentario") as! ControladorPantallaDelPost
+        
+        celda_comentario.id_comentario = self.lista_comentarios[indexPath.item].id
+        
+        self.navigationController?.pushViewController(celda_comentario, animated: true)
+    }
 
     /*
     // MARK: - Navigation

@@ -24,6 +24,7 @@
 		FB6CD1122CB98610001FA911 /* proveedor_publicaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6CD1112CB98610001FA911 /* proveedor_publicaciones.swift */; };
 		FBD298B32CCBF23400E45CD6 /* Comentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD298B22CCBF23400E45CD6 /* Comentario.swift */; };
 		FBD298B52CCBF28600E45CD6 /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD298B42CCBF28600E45CD6 /* Usuarios.swift */; };
+		FBE774DC2CDBDA5900A28B13 /* VistaZeldaComentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE774DB2CDBDA5900A28B13 /* VistaZeldaComentario.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		FB6CD1112CB98610001FA911 /* proveedor_publicaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = proveedor_publicaciones.swift; sourceTree = "<group>"; };
 		FBD298B22CCBF23400E45CD6 /* Comentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comentario.swift; sourceTree = "<group>"; };
 		FBD298B42CCBF28600E45CD6 /* Usuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
+		FBE774DB2CDBDA5900A28B13 /* VistaZeldaComentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaZeldaComentario.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			children = (
 				FB6CD1062CB983C6001FA911 /* VistaDeZelda.swift */,
 				FB09A8F22CB4416500BADC4C /* ControladorPantallaPrincipalDeColeccion.swift */,
+				FBE774DB2CDBDA5900A28B13 /* VistaZeldaComentario.swift */,
 			);
 			path = vista_de_celdas;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB6CD10C2CB984F9001FA911 /* mod_navegador_principal.swift in Sources */,
+				FBE774DC2CDBDA5900A28B13 /* VistaZeldaComentario.swift in Sources */,
 				FB09A8F32CB4416500BADC4C /* ControladorPantallaPrincipalDeColeccion.swift in Sources */,
 				FB6CD1072CB983C6001FA911 /* VistaDeZelda.swift in Sources */,
 				FBD298B52CCBF28600E45CD6 /* Usuarios.swift in Sources */,
